@@ -10,8 +10,8 @@ import {
 function App() {
   return (
     <div className="App">
-      <ContactPage />
       <LandingPage />
+      <ContactPage />
       <ServicesPage />
       <TestimonialsPage />
     </div>

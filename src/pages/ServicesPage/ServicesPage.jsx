@@ -1,5 +1,7 @@
 import React from "react";
 
-const ServicesPage = () => {};
+const ServicesPage = () => {
+  return null;
+};
 
 export default ServicesPage;

@@ -1,5 +1,7 @@
 import React from "react";
 
-const TestimonialsPage = () => {};
+const TestimonialsPage = () => {
+  return null;
+};
 
 export default TestimonialsPage;
