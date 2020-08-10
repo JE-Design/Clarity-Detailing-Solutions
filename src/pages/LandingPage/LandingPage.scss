@@ -3,6 +3,12 @@
   background-size: cover;
   background-position: center;
 
+  h1,
+  h2 {
+    color: #fffafa;
+    font-family: "segoeUI";
+  }
+
   // margin-top: $navbar-height;
   // @include mobile {
   //   margin-top: $navbar-height - 50;
