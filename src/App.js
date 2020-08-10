@@ -1,11 +1,19 @@
 import React from "react";
 import "./App.css";
-import { contactPage } from "pages/";
+import {
+  ContactPage,
+  LandingPage,
+  ServicesPage,
+  TestimonialsPage,
+} from "pages/";
 
 function App() {
   return (
     <div className="App">
-      <contactPage />
+      <ContactPage />
+      <LandingPage />
+      <ServicesPage />
+      <TestimonialsPage />
     </div>
   );
 }

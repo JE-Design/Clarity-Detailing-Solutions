@@ -1,4 +1,4 @@
-export { default as contactPage } from "./contactPage";
-export { default as landingPage } from "./landingPage";
-export { default as servicesPage } from "./servicesPage";
-export { default as testimonialsPage } from "./testimonialsPage";
+export { default as ContactPage } from "./ContactPage";
+export { default as LandingPage } from "./LandingPage";
+export { default as ServicesPage } from "./ServicesPage";
+export { default as TestimonialsPage } from "./TestimonialsPage";
