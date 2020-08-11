@@ -1,0 +1,14 @@
+@import "styles/mediaQueries";
+
+@mixin dynamic-fonts($baseSize) {
+  font-size: $baseSize * 0.6;
+  @include md {
+    font-size: $baseSize * 0.7;
+  }
+  @include lg {
+    font-size: $baseSize * 0.8;
+  }
+  @include xl {
+    font-size: $baseSize;
+  }
+}

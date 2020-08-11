@@ -1,12 +1,24 @@
+@import "styles/mixins.scss";
+@import "styles/mediaQueries.scss";
+
 .landing-page {
   height: 100vh;
   background-size: cover;
-  background-position: center;
+  background-position: right center;
+  transition: background-position 0.5s;
 
   h1,
   h2 {
     color: #fffafa;
+    font-weight: 100;
     font-family: "Open Sans";
+  }
+
+  h1 {
+    @include dynamic-fonts(5em);
+  }
+  h2 {
+    @include dynamic-fonts(2.5em);
   }
 
   // margin-top: $navbar-height;

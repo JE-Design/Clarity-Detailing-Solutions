@@ -7,9 +7,9 @@ const LandingPage = () => (
     className="w-full flex landing-page"
     style={{ backgroundImage: `url(${landing_image})` }}
   >
-    <div className="self-end">
-      <h1 class="text-4xl">Clarity Detailing Solutions</h1>
-      <h2 class="text-3xl">It's all in the details</h2>
+    <div className="p-6 self-end text-left">
+      <h1>Clarity Detailing Solutions</h1>
+      <h2>It's all in the details</h2>
     </div>
   </div>
 );
