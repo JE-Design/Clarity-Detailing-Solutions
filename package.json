@@ -16,10 +16,12 @@
   "scripts": {
     "start": "yarn watch:css && react-scripts start",
     "build": "yarn build:css && react-scripts build",
+    "clean": "yarn clean:css && rm -rf node_modules",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:css": "postcss src/styles/tailwind.css -o src/styles/tailwind-index.css",
-    "watch:css": "postcss src/styles/tailwind.css -o src/styles/tailwind-index.css"
+    "watch:css": "postcss src/styles/tailwind.css -o src/styles/tailwind-index.css",
+    "clean:css": "rm src/styles/tailwind-index.css && touch src/styles/tailwind-index.css"
   },
   "eslintConfig": {
     "extends": "react-app"
