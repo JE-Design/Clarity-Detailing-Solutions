@@ -4,7 +4,7 @@ import "./LandingPage.scss";
 
 const LandingPage = () => (
   <div
-    className="w-full flex landing-page"
+    className="w-full flex landing-page bg-cover bg-right"
     style={{ backgroundImage: `url(${landing_image})` }}
   >
     <div className="p-6 self-end text-left">
