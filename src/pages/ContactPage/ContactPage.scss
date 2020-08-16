@@ -1,0 +1,42 @@
+@import "styles/colors.scss";
+
+.card {
+  background-color: $color-dark-grey;
+  color: $color-off-white;
+  font-family: "Open sans";
+
+  .title {
+    font-size: 2.5em;
+    font-weight: 350;
+  }
+
+  .text {
+    font-size: 1.5em;
+    font-weight: 300;
+    word-break: break-word;
+  }
+
+  .textIcon {
+    font-size: 1.5em;
+    margin-right: 0.2em;
+    font-weight: 300;
+    padding: 0;
+  }
+
+  .linebreak {
+    height: 3px;
+    border: 0;
+    background: linear-gradient(
+      to right,
+      transparent,
+      $color-off-white,
+      $color-off-white,
+      transparent
+    );
+  }
+
+  .icon {
+    font-size: 3em;
+    margin: 0.2em 0.5em;
+  }
+}
