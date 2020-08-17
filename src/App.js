@@ -1,5 +1,6 @@
 import React from "react";
 import AppRouter from "./AppRouter"
+import Footer from "./components/Footer"
 import "./App.css";
 
 function App() {
