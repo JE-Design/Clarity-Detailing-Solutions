@@ -1,7 +1,8 @@
 import React from "react";
 
 const Footer = () => {
-  return null;
+  <footer class="fixed flex flex-col w-full">
+  </footer>
 };
 
 export default Footer;
