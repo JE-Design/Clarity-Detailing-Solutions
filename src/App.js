@@ -1,5 +1,6 @@
 import React from "react";
-import AppRouter from "./AppRouter";
+import AppRouter from "./AppRouter"
+import Footer from "./components/Footer"
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faInstagram,
@@ -31,6 +32,7 @@ function App() {
   return (
     <div className="App">
       <AppRouter />
+      <Footer />
     </div>
   );
 }

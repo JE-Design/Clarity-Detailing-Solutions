@@ -1,0 +1,39 @@
+@import "styles/colors.scss";
+@import "styles/mixins.scss";
+
+footer {
+  background-color: $color-black;
+
+  a,
+  p {
+    color: $color-off-white;
+    font-weight: 100;
+    font-family: "Open Sans";
+  }
+
+  hr {
+    height: 1px;
+  }
+
+  li {
+    a {
+      @include dynamic-fonts(1.4em);
+    }
+  }
+
+  img {
+    filter: brightness(0) invert(1);
+  }
+  #top {
+    #contact {
+      p, a {
+        @include dynamic-fonts(1.2em);
+      }
+    }
+  }
+  #bottom {
+    p {
+      @include dynamic-fonts(1.1em);
+    }
+  }
+}
