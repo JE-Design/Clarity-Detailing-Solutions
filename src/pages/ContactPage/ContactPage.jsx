@@ -1,10 +1,16 @@
 import React from "react";
-import { TextIconCombo, LinkIcon } from "components/";
+import { PageHeader, TextIconCombo, LinkIcon } from "components/";
+import { contact_header } from "assets/";
+
 import "./ContactPage.scss";
 
 const ContactPage = () => (
   <>
-    <p>hello</p>
+    <PageHeader
+      imagePath={contact_header}
+      title="Contact Page"
+      caption="E-mail us here for a quote or additional information on any of our services!"
+    />
     <div className="card p-6 m-12 flex text-left flex-col">
       <div className="px-3">
         <h3 className="title">Catch us Here Too!</h3>
