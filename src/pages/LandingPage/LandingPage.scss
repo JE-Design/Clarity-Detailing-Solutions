@@ -1,7 +1,7 @@
 @import "styles/mixins.scss";
 @import "styles/mediaQueries.scss";
 
-.landing-page {
+#landing-header {
   height: 100vh;
   transition: background-position 0.5s;
 
@@ -20,7 +20,7 @@
   }
 }
 
-.contact-section {
+#contact-section {
   height: 50vh;
   h3,
   h4 {

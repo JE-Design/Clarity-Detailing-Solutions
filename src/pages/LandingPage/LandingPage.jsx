@@ -4,9 +4,10 @@ import variables from "styles/colors.scss";
 import "./LandingPage.scss";
 
 const LandingPage = () => (
-  <>
+  <div>
     <div
-      className="w-full flex landing-page bg-cover bg-right"
+      id="landing-header"
+      className="w-full flex bg-cover bg-right"
       style={{ backgroundImage: `url(${landing_image})` }}
     >
       <div className="p-6 self-end text-left">
@@ -15,7 +16,8 @@ const LandingPage = () => (
       </div>
     </div>
     <div
-      className="w-full flex contact-section justify-center bg-cover bg-center"
+      id="contact-section"
+      className="w-full flex justify-center bg-cover bg-center"
       style={{
         backgroundImage: `linear-gradient(to bottom, ${variables.colorBlack}, transparent 4%, transparent 96%, ${variables.colorBlack}), url(${contact_image})`,
       }}
@@ -27,7 +29,7 @@ const LandingPage = () => (
         </a>
       </div>
     </div>
-  </>
+  </div>
 );
 
 export default LandingPage;
