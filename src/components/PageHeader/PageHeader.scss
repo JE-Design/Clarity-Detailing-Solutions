@@ -2,6 +2,8 @@
 
 .page-header {
   height: 70vh;
+  position: relative;
+  z-index: 1;
   //   Add margin top for the navbar in the future
   //   margin-top: $navbar-height;
   //   @include xs {

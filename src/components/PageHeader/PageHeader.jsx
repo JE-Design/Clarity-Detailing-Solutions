@@ -4,7 +4,7 @@ import "./PageHeader.scss";
 const PageHeader = ({ imagePath, title, caption }) => {
   return (
     <div
-      className="page-header p-6 bg-cover bg-center flex items-center justify-start"
+      className="page-header p-12 bg-cover bg-center flex items-center justify-start"
       style={{
         backgroundImage: `url(${imagePath})`,
       }}
