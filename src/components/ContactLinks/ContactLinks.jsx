@@ -10,33 +10,49 @@ const ContactLinks = () => (
       <TextIconCombo
         text="123 Main Street, NY 10030"
         textClassName="text"
-        iconClassName="textIcon"
+        iconClassName="textIcon p-0"
         icon="map-marker"
       />
       <TextIconCombo
         text="905-739-2859"
         textClassName="text"
-        iconClassName="textIcon"
+        iconClassName="textIcon p-0"
         icon="phone"
       />
       <TextIconCombo
         text="contact@claritydetailingsolutions.com"
         textClassName="text"
-        iconClassName="textIcon"
+        iconClassName="textIcon p-0"
         icon="envelope"
       />
       <hr className="w-full my-5 linebreak" />
     </div>
     <div className="w-full inline-flex flex-wrap justify-center">
       <LinkIcon
-        className="icon"
+        className="icon mx-5 my-2"
         icon={["fab", "instagram"]}
         url="placeholder"
       />
-      <LinkIcon className="icon" icon={["fab", "facebook"]} url="placeholder" />
-      <LinkIcon className="icon" icon={["fab", "twitter"]} url="placeholder" />
-      <LinkIcon className="icon" icon={["fab", "youtube"]} url="placeholder" />
-      <LinkIcon className="icon" icon={["fab", "snapchat"]} url="placeholder" />
+      <LinkIcon
+        className="icon mx-5 my-2"
+        icon={["fab", "facebook"]}
+        url="placeholder"
+      />
+      <LinkIcon
+        className="icon mx-5 my-2"
+        icon={["fab", "twitter"]}
+        url="placeholder"
+      />
+      <LinkIcon
+        className="icon mx-5 my-2"
+        icon={["fab", "youtube"]}
+        url="placeholder"
+      />
+      <LinkIcon
+        className="icon mx-5 my-2"
+        icon={["fab", "snapchat"]}
+        url="placeholder"
+      />
     </div>
   </>
 );

@@ -3,7 +3,7 @@ import { LinkIcon } from "components/";
 
 const LinkIconCombo = ({ text, textClassName, iconClassName, ...props }) => {
   return (
-    <div className="flex py-1">
+    <div className="flex break-all py-1">
       <LinkIcon className={iconClassName} {...props} />
       <p className={textClassName}>{text}</p>
     </div>
