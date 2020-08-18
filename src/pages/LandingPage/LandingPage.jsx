@@ -1,5 +1,5 @@
 import React from "react";
-import { landing_image, contact_image } from "assets/";
+import { landing_image, about_image, contact_image } from "assets/";
 import variables from "styles/colors.scss";
 import "./LandingPage.scss";
 
@@ -18,7 +18,7 @@ const LandingPage = () => (
     <div
         id="about-section"
         className="w-full flex bg-cover bg-right"
-        style={{ backgroundImage: `url(${about_landing_image})` }}
+        style={{ backgroundImage: `url(${about_image})` }}
     >
         <div className="p-6 flex self-center">
             <h2 className="self-center w-1/2">About Us</h2>
