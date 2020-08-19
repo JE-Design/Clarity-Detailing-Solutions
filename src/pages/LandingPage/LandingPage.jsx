@@ -17,10 +17,10 @@ const LandingPage = () => (
     </div>
     <div
         id="about-section"
-        className="w-full flex bg-cover bg-right"
+        className="w-full flex bg-cover bg-center"
         style={{ backgroundImage: `url(${about_image})` }}
     >
-        <div className="p-6 flex self-center">
+        <div className="p-6 flex self-center mb-20">
             <h2 className="self-center w-1/2">About Us</h2>
             <p className="text-left mr-10 w-1/2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra ipsum non leo placerat vulputate. Etiam lobortis feugiat mauris, nec lobortis risus auctor sit amet amenet numet. </p>
         </div>
