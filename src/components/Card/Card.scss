@@ -1,0 +1,10 @@
+@import "styles/colors.scss";
+
+.card {
+  color: $color-off-white;
+  font-family: "Open sans";
+
+  .inner-container {
+    background-color: $color-dark-grey;
+  }
+}
