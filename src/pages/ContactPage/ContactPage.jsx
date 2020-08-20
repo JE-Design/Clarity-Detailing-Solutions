@@ -15,10 +15,10 @@ const ContactPage = () => (
       <Card className="contact-links w-full">
         <ContactLinks />
       </Card>
-      <Card className="contact-links sm:w-full md:w-1/2">
+      <Card className="contact-links w-full sm:w-full md:w-1/2">
         <ContactLinks />
       </Card>
-      <Card className="contact-links sm:w-full md:w-1/2">
+      <Card className="contact-links w-full sm:w-full md:w-1/2">
         <ContactLinks />
       </Card>
     </PageContainer>

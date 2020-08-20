@@ -4,11 +4,7 @@
   color: $color-off-white;
   font-family: "Open sans";
 
-  position: relative;
-  z-index: 2;
-
   .inner-container {
     background-color: $color-dark-grey;
-    margin: -0.75rem;
   }
 }
