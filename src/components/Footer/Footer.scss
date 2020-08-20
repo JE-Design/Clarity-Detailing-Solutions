@@ -37,4 +37,16 @@ footer {
       @include dynamic-text(1.1em);
     }
   }
+
+  .linebreak {
+    height: 3px;
+    border: 0;
+    background: linear-gradient(
+      to right,
+      transparent,
+      $color-off-white,
+      $color-off-white,
+      transparent
+    );
+  }
 }
