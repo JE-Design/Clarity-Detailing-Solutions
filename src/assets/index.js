@@ -1,4 +1,5 @@
 export { default as landing_image } from "./images/landing_image.jpg";
+export { default as about_image } from "./images/about_image.jpg";
 export { default as logo_image } from "./images/logo_image.png";
 export { default as contact_image } from "./images/contact_image.jpg";
 export { default as contact_header } from "./images/contact_header.jpg";

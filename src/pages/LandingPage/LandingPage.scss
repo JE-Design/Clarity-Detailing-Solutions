@@ -2,22 +2,43 @@
 @import "styles/mediaQueries.scss";
 
 #landing-header {
-  height: 100vh;
-  transition: background-position 0.5s;
+    height: 100vh;
+    transition: background-position 0.5s;
+  
+    h1,
+    h2 {
+      color: #fffafa;
+      font-weight: 100;
+      font-family: "Open Sans";
+    }
+  
+    h1 {
+      @include dynamic-fonts(5em);
+    }
+    h2 {
+      @include dynamic-fonts(2.5em);
+    }
+}
 
-  h1,
-  h2 {
-    color: #fffafa;
-    font-weight: 100;
-    font-family: "Open Sans";
-  }
+#about-section {
+    height: 100vh;
+    h1,
+    h2,
+    p {
+        color: #fffafa;
+        font-weight: 100;
+        font-family: "Open Sans";
+    }
 
-  h1 {
-    @include dynamic-fonts(5em);
-  }
-  h2 {
-    @include dynamic-fonts(2.5em);
-  }
+    h1 {
+        @include dynamic-fonts(5em);
+    }
+    h2 {
+        @include dynamic-fonts(4.5em);
+    }
+    p {
+        @include dynamic-fonts(1.9em);
+    }
 }
 
 #contact-section {

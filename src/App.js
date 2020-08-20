@@ -15,6 +15,7 @@ import {
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
+import { Navbar } from "components";
 
 //Initialize fontawesome with desired icons
 library.add(
@@ -31,6 +32,7 @@ library.add(
 function App() {
   return (
     <div className="App">
+      <Navbar />
       <AppRouter />
       <Footer />
     </div>
