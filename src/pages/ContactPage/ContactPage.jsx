@@ -18,8 +18,17 @@ const ContactPage = () => (
       <Card className="contact-links w-full sm:w-full md:w-1/2">
         <ContactLinks />
       </Card>
-      <Card className="contact-links w-full sm:w-full md:w-1/2">
-        <ContactLinks />
+      <Card empty={true} className="w-full sm:w-full md:w-1/2">
+        <iframe
+          id="google-map"
+          title="map"
+          width="100%"
+          height="100%"
+          frameBorder="0"
+          style={{ border: 0 }}
+          src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJj3feJ2yYLIgRIQ7f2Fbuais&key=`}
+          allowFullScreen
+        />
       </Card>
     </PageContainer>
   </>
