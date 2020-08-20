@@ -1,12 +1,25 @@
 @import "styles/mediaQueries";
 
-@mixin dynamic-fonts($baseSize) {
-  font-size: $baseSize * 0.4;
+@mixin dynamic-header($baseSize) {
+  font-size: $baseSize * 0.6;
   @include md {
     font-size: $baseSize * 0.7;
   }
   @include lg {
     font-size: $baseSize * 0.8;
+  }
+  @include xl {
+    font-size: $baseSize;
+  }
+}
+
+@mixin dynamic-text($baseSize) {
+  font-size: $baseSize * 0.8;
+  @include md {
+    font-size: $baseSize * 0.85;
+  }
+  @include lg {
+    font-size: $baseSize * 0.9;
   }
   @include xl {
     font-size: $baseSize;

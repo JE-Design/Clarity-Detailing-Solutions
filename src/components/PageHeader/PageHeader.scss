@@ -1,0 +1,29 @@
+@import "styles/colors.scss";
+@import "styles/mixins.scss";
+@import "styles/mediaQueries.scss";
+
+.page-header {
+  height: 70vh;
+  @include sm {
+    height: 50vh;
+  }
+
+  //   Add margin top for the navbar in the future
+  //   margin-top: $navbar-height;
+  //   @include xs {
+  //     margin-top: $navbar-height - 50;
+  //   }
+
+  .page-header-title,
+  .page-header-caption {
+    font-family: "Open sans";
+    font-weight: 300;
+    color: $color-off-white;
+  }
+  .page-header-title {
+    @include dynamic-header(4em);
+  }
+  .page-header-caption {
+    @include dynamic-header(1.75em);
+  }
+}
