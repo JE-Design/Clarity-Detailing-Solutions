@@ -12,7 +12,7 @@ const LandingPage = () => (
     >
       <div className="p-6 self-end text-left">
         <h1>Clarity Detailing Solutions</h1>
-        <h2>It's all in the details</h2>
+        <p>It's all in the details</p>
       </div>
     </div>
     <div
