@@ -76,15 +76,15 @@ const LandingPage = () => (
         </div>
       </div>
       <div
-          id="services-section3"
-          className="bg-cover relative flex flex-col block sm:hidden h-full w-full sm:w-1/2 bg-center"
-          style={{ backgroundImage: `url(${services_content3})` }}
-        >
-          <div className="absolute p-4 bottom-0 left-0">
-            <h3>Coating</h3>
-            <a href="/services">Learn More</a>
-          </div>
+        id="services-section3"
+        className="bg-cover relative flex flex-col block sm:hidden h-full w-full sm:w-1/2 bg-center"
+        style={{ backgroundImage: `url(${services_content3})` }}
+      >
+        <div className="absolute p-4 bottom-0 left-0">
+          <h3>Coating</h3>
+          <a href="/services">Learn More</a>
         </div>
+      </div>
     </div>
     <div
       id="contact-section"
