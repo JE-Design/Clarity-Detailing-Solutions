@@ -1,5 +1,7 @@
 import React from "react";
-import { PageHeader } from "components/";
+import { PageContainer, PageHeader, Card } from "components/";
+//temporary
+import { ContactLinks } from "components/";
 import { services_header } from "assets/";
 
 const ServicesPage = () => (
@@ -9,6 +11,17 @@ const ServicesPage = () => (
       title="Services"
       caption="They're in the service Industry?"
     />
+    <PageContainer className="flex flex-wrap">
+      <Card className="contact-links w-full">
+        <ContactLinks />
+      </Card>
+      <Card className="contact-links w-full">
+        <ContactLinks />
+      </Card>
+      <Card className="contact-links w-full">
+        <ContactLinks />
+      </Card>
+    </PageContainer>
   </>
 );
 
