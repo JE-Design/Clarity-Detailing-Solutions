@@ -17,7 +17,7 @@ footer {
 
   li {
     a {
-      @include dynamic-fonts(1.4em);
+      @include dynamic-text(1.4em);
     }
   }
 
@@ -26,14 +26,15 @@ footer {
   }
   #top {
     #contact {
-      p, a {
-        @include dynamic-fonts(1.2em);
+      p,
+      a {
+        @include dynamic-text(1.2em);
       }
     }
   }
   #bottom {
     p {
-      @include dynamic-fonts(1.1em);
+      @include dynamic-text(1.1em);
     }
   }
 }

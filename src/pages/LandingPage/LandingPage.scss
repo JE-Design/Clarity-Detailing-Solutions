@@ -13,6 +13,7 @@
         font-family: "Open Sans";
     }
 
+<<<<<<< HEAD
     h1 {
         @include dynamic-fonts(5em);
     }
@@ -76,4 +77,53 @@
         text-decoration: underline;
         @include dynamic-fonts(2em);
     }
+=======
+  h1 {
+    @include dynamic-header(5em);
+  }
+  h2 {
+    @include dynamic-header(2.5em);
+  }
+}
+
+#about-section {
+  height: 100vh;
+  h1,
+  h2,
+  p {
+    color: #fffafa;
+    font-weight: 100;
+    font-family: "Open Sans";
+  }
+
+  h1 {
+    @include dynamic-header(5em);
+  }
+  h2 {
+    @include dynamic-header(4.5em);
+  }
+  p {
+    @include dynamic-header(1.9em);
+  }
+}
+
+#contact-section {
+  height: 50vh;
+  h3,
+  h4 {
+    color: #fffafa;
+    font-weight: 100;
+    font-family: "Open Sans";
+  }
+  h3 {
+    font-weight: 500;
+    @include dynamic-text(4em);
+    //@include dynamic-text(5em);
+  }
+  h4 {
+    text-decoration: underline;
+    @include dynamic-text(2.5em);
+    //@include dynamic-fonts(2em);
+  }
+>>>>>>> master
 }
