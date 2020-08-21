@@ -1,5 +1,6 @@
 @import "styles/mixins.scss";
 @import "styles/mediaQueries.scss";
+@import "styles/colors.scss";
 
 h1,
 h2,
@@ -32,6 +33,23 @@ p {
     p {
         @include dynamic-header(1.9em);
     }
+}
+
+#customers-section {
+    background-color: $color-near-black;
+
+    h2 {
+        @include dynamic-header(4.5em);
+    }
+
+    p {
+        @include dynamic-text(1.2em)
+    }
+    .customer {
+        color: $color-light-grey;
+        @include dynamic-text(1.0em);
+    }
+    
 }
 
 #contact-section {

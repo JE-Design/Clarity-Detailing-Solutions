@@ -16,14 +16,47 @@ const LandingPage = () => (
       </div>
     </div>
     <div
-        id="about-section"
-        className="w-full flex bg-cover bg-center"
-        style={{ backgroundImage: `url(${about_image})` }}
+      id="about-section"
+      className="w-full flex bg-cover bg-center"
+      style={{ backgroundImage: `url(${about_image})` }}
     >
-        <div className="p-6 flex self-center mb-20">
-            <h2 className="self-center w-1/2">About Us</h2>
-            <p className="text-left mr-10 w-1/2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra ipsum non leo placerat vulputate. Etiam lobortis feugiat mauris, nec lobortis risus auctor sit amet amenet numet. </p>
+      <div className="p-6 flex self-center mb-20">
+        <h2 className="self-center w-1/2">About Us</h2>
+        <p className="text-left mr-10 w-1/2">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+          pharetra ipsum non leo placerat vulputate. Etiam lobortis feugiat
+          mauris, nec lobortis risus auctor sit amet amenet numet.{" "}
+        </p>
+      </div>
+    </div>
+    <div
+      id="customers-section"
+      className="w-full flex flex-col bg-cover bg-center"
+    >
+      <h2 className="p-6 self-center w-full">Our Customers</h2>
+      <div className="flex flex-row">
+        <div className="flex flex-col w-1/3 text-left">
+          <img src={landing_image} alt="car"></img>
+          <div className="px-4 py-2">
+            <p>“I think, therefore I am”</p>
+            <p className="customer">René Descartes</p>
+          </div>
         </div>
+        <div className="flex flex-col w-1/3 text-left">
+          <img src={landing_image} alt="car"></img>
+          <div className="px-4 py-2">
+            <p>“I think, therefore I am”</p>
+            <p className="customer">René Descartes</p>
+          </div>
+        </div>
+        <div className="flex flex-col w-1/3 text-left">
+          <img src={landing_image} alt="car"></img>
+          <div className="px-4 py-2">
+            <p>“I think, therefore I am”</p>
+            <p className="customer">René Descartes</p>
+          </div>
+        </div>
+      </div>
     </div>
     <div
       id="contact-section"
