@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import Nanogram from "nanogram.js";
 import "./Instafeed.scss";
 
-const instagramParser = new Nanogram();
-
 const Instafeed = () => {
+  const instagramParser = new Nanogram();
   const [URLs, setURLs] = useState([]);
 
   const getImageURLS = () => {
@@ -13,7 +12,7 @@ const Instafeed = () => {
       console.log(media);
       let images;
       try {
-        images = media.tag.edge_owner_to_timeline_media.edges;
+        images = media.profile.edge_owner_to_timeline_media.edges;
       } catch (e) {
         console.log(e);
         return [];
