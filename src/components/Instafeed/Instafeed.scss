@@ -6,8 +6,14 @@
     @include dynamic-text(2.5em);
     font-weight: 350;
   }
-  .image {
-    max-height: 300px;
-    object-fit: cover;
+  .crt-logo {
+    color: white !important;
+  }
+  .crt-play-icon {
+    display: none;
+  }
+
+  .crt-post-c {
+    padding: 12px;
   }
 }

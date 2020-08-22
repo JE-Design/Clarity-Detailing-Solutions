@@ -7465,11 +7465,6 @@ nan@^2.12.1, nan@^2.13.2:
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.1.tgz#d7be34dfa3105b91494c3147089315eff8874b01"
   integrity sha512-isWHgVjnFjh2x2yuJ/tj3JbwoHu3UC2dX5G/88Cm24yB6YopVgxvBObDY7n5xW6ExmFhJpSEQqFPvq9zaXc8Jw==
 
-nanogram.js@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/nanogram.js/-/nanogram.js-2.0.0.tgz#0e6a58a40e1673572da947a36392afc5580e066d"
-  integrity sha512-BA82sGxApmQ5Tac6zdQ/rg9C4IcSFyT8+6TpcnKzRkoY1N5LlKEGtuTaFuLhwDM7mqQwS3N56Nzel5CubEPqRw==
-
 nanomatch@^1.2.9:
   version "1.2.13"
   resolved "https://registry.yarnpkg.com/nanomatch/-/nanomatch-1.2.13.tgz#b87a8aa4fc0de8fe6be88895b38983ff265bd119"
