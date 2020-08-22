@@ -8,6 +8,7 @@ const Testimonial = ({
   customerTestimony,
   customerPhoto,
   carPhotos,
+  review
 }) => (
   <Card className={className}>
     <div className="testimony-content">
@@ -20,10 +21,10 @@ const Testimonial = ({
         ></img>
       </div>
       <p>{customerTestimony}</p>
-      <a href="#">Five star review on yelp</a>
-      <div>
+      <a href={review.url}>{review.text}</a>
+      <div id="car-images">
       {carPhotos.map((photoPath) => {
-        return <img className="w-full mt-5" src={photoPath}></img>;
+        return <img className="w-full mt-5" alt="car" src={photoPath}></img>;
       })}
       </div>
     </div>

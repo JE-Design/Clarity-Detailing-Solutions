@@ -5,6 +5,10 @@ import { PageContainer, PageHeader, Testimonial } from "components/";
 import { testimonials_header } from "assets/";
 
 const customerTestimonialPhotos1 = [testimonials_header,testimonials_header];
+const testimonialReview1 = {url:"#",text:"Five star review on yelp"}
+
+const customerTestimonialPhotos2 = [testimonials_header,testimonials_header];
+const testimonialReview2 = {url:"#",text:"Five star review on yelp"}
 
 const TestimonialsPage = () => (
   <>
@@ -20,13 +24,15 @@ const TestimonialsPage = () => (
         customerTestimony="This is a testimonial from a customer that exists and has seen our products!"
         customerPhoto={testimonials_header}
         carPhotos={customerTestimonialPhotos1}
+        review={testimonialReview1}
       ></Testimonial>
       <Testimonial
         className="sm:w-full md:w-1/2"
         customerName="Jim"
         customerTestimony="This is a testimonial from a customer that exists and has seen our products!"
         customerPhoto={testimonials_header}
-        carPhotos={customerTestimonialPhotos1}
+        carPhotos={customerTestimonialPhotos2}
+        review={testimonialReview2}
       ></Testimonial>
     </PageContainer>
   </>
