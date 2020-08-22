@@ -17,18 +17,6 @@
     font-weight: 300;
   }
 
-  .linebreak {
-    height: 3px;
-    border: 0;
-    background: linear-gradient(
-      to right,
-      transparent,
-      $color-off-white,
-      $color-off-white,
-      transparent
-    );
-  }
-
   .icon {
     @include dynamic-text(3em);
   }
