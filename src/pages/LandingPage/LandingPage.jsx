@@ -26,7 +26,9 @@ const LandingPage = () => (
     <div
       id="about-section"
       className="w-full flex bg-cover bg-center"
-      style={{ backgroundImage: `url(${about_image})` }}
+      style={{
+        backgroundImage: `linear-gradient(to top, black, transparent 8%), url(${about_image})`,
+      }}
     >
       <div className="p-6 flex self-center mb-20">
         <h2 className="self-center w-1/2">About Us</h2>
@@ -39,8 +41,10 @@ const LandingPage = () => (
     </div>
     <div
       id="services-section"
-      className="w-full flex flex-col text-left bg-cover bg-center p-16 pt-2"
-      style={{ backgroundImage: `url(${services_image})` }}
+      className="w-full flex flex-col text-left bg-cover bg-bottom p-16 pt-2"
+      style={{
+        backgroundImage: `linear-gradient(to bottom, black, transparent 4%), url(${services_image})`,
+      }}
     >
       <h2 className="p-5 text-center">Services</h2>
       <div
@@ -76,21 +80,21 @@ const LandingPage = () => (
         </div>
       </div>
       <div
-          id="services-section3"
-          className="bg-cover relative flex flex-col block sm:hidden h-full w-full sm:w-1/2 bg-center"
-          style={{ backgroundImage: `url(${services_content3})` }}
-        >
-          <div className="absolute p-4 bottom-0 left-0">
-            <h3>Coating</h3>
-            <a href="/services">Learn More</a>
-          </div>
+        id="services-section3"
+        className="bg-cover relative flex flex-col block sm:hidden h-full w-full sm:w-1/2 bg-center"
+        style={{ backgroundImage: `url(${services_content3})` }}
+      >
+        <div className="absolute p-4 bottom-0 left-0">
+          <h3>Coating</h3>
+          <a href="/services">Learn More</a>
         </div>
+      </div>
     </div>
     <div
       id="contact-section"
       className="w-full flex justify-center bg-cover bg-center"
       style={{
-        backgroundImage: `linear-gradient(to bottom, ${variables.colorBlack}, transparent 4%, transparent 96%, ${variables.colorBlack}), url(${contact_image})`,
+        backgroundImage: `linear-gradient(to bottom, black, transparent 8%, transparent 96%, ${variables.colorBlack}), url(${contact_image})`,
       }}
     >
       <div className="p-6 self-center">
