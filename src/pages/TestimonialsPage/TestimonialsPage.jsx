@@ -1,14 +1,20 @@
 import React from "react";
-import { PageContainer, PageHeader, Testimonial } from "components/";
+import {
+  Card,
+  Instafeed,
+  PageContainer,
+  PageHeader,
+  Testimonial,
+} from "components/";
 
 //Temporary
 import { testimonials_header } from "assets/";
 
-const customerTestimonialPhotos1 = [testimonials_header,testimonials_header];
-const testimonialReview1 = {url:"#",text:"Five star review on yelp"}
+const customerTestimonialPhotos1 = [testimonials_header, testimonials_header];
+const testimonialReview1 = { url: "#", text: "Five star review on yelp" };
 
-const customerTestimonialPhotos2 = [testimonials_header,testimonials_header];
-const testimonialReview2 = {url:"#",text:"Five star review on yelp"}
+const customerTestimonialPhotos2 = [testimonials_header, testimonials_header];
+const testimonialReview2 = { url: "#", text: "Five star review on yelp" };
 
 const TestimonialsPage = () => (
   <>
@@ -34,6 +40,9 @@ const TestimonialsPage = () => (
         carPhotos={customerTestimonialPhotos2}
         review={testimonialReview2}
       ></Testimonial>
+      <Card className="contact-links w-full">
+        <Instafeed />
+      </Card>
     </PageContainer>
   </>
 );

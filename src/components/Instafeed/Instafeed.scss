@@ -1,0 +1,13 @@
+@import "styles/colors.scss";
+@import "styles/mixins.scss";
+
+.instafeed {
+  h3 {
+    @include dynamic-text(2.5em);
+    font-weight: 350;
+  }
+  .image {
+    max-height: 300px;
+    object-fit: cover;
+  }
+}
