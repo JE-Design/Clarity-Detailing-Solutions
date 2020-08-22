@@ -1,5 +1,11 @@
 import React from "react";
-import { Card, ContactLinks, PageContainer, PageHeader } from "components/";
+import {
+  Card,
+  ContactLinks,
+  EmailForm,
+  PageContainer,
+  PageHeader,
+} from "components/";
 import { contact_header } from "assets/";
 
 import "./ContactPage.scss";
@@ -13,7 +19,7 @@ const ContactPage = () => (
     />
     <PageContainer className="flex flex-wrap">
       <Card className="contact-links w-full">
-        <ContactLinks />
+        <EmailForm />
       </Card>
       <Card className="contact-links w-full sm:w-full md:w-1/2">
         <ContactLinks />
