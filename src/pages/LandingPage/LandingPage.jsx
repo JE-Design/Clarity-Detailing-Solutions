@@ -43,7 +43,7 @@ const LandingPage = () => (
       id="services-section"
       className="w-full flex flex-col text-left bg-cover bg-bottom p-16 pt-2"
       style={{
-        backgroundImage: `linear-gradient(to bottom, black, transparent 4%), url(${services_image})`,
+        backgroundImage: `linear-gradient(to bottom, black, transparent 2%), url(${services_image})`,
       }}
     >
       <h2 className="p-5 text-center">Services</h2>
@@ -94,7 +94,7 @@ const LandingPage = () => (
       id="contact-section"
       className="w-full flex justify-center bg-cover bg-center"
       style={{
-        backgroundImage: `linear-gradient(to bottom, black, transparent 8%, transparent 96%, ${variables.colorBlack}), url(${contact_image})`,
+        backgroundImage: `linear-gradient(to bottom, black, transparent 4%, transparent 96%, ${variables.colorBlack}), url(${contact_image})`,
       }}
     >
       <div className="p-6 self-center">
