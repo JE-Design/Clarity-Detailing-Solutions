@@ -34,22 +34,22 @@ const LandingPage = () => (
       className="w-full flex flex-col bg-cover bg-center"
     >
       <h2 className="p-6 self-center w-full">Our Customers</h2>
-      <div className="flex flex-row">
-        <div className="flex flex-col w-1/3 text-left">
+      <div className="flex flex-col sm:flex-row mb-0 sm:mb-6">
+        <div className="flex flex-col w-full sm:w-1/3 text-left">
           <img src={landing_image} alt="car"></img>
           <div className="px-4 py-2">
             <p>“I think, therefore I am”</p>
             <p className="customer">René Descartes</p>
           </div>
         </div>
-        <div className="flex flex-col w-1/3 text-left">
+        <div className="flex flex-col w-full sm:w-1/3  text-left">
           <img src={landing_image} alt="car"></img>
           <div className="px-4 py-2">
             <p>“I think, therefore I am”</p>
             <p className="customer">René Descartes</p>
           </div>
         </div>
-        <div className="flex flex-col w-1/3 text-left">
+        <div className="flex flex-col w-full sm:w-1/3 text-left">
           <img src={landing_image} alt="car"></img>
           <div className="px-4 py-2">
             <p>“I think, therefore I am”</p>

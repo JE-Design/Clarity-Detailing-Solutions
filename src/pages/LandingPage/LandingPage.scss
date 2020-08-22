@@ -43,11 +43,11 @@ p {
     }
 
     p {
-        @include dynamic-text(1.2em)
+        @include dynamic-text(1.7em)
     }
     .customer {
         color: $color-light-grey;
-        @include dynamic-text(1.0em);
+        @include dynamic-text(1.5em);
     }
     
 }
