@@ -14,4 +14,10 @@
         color: $color-grey;
         text-decoration: underline;
     }
+    
+    #car-images {
+        img {
+            object-fit: cover;
+        }
+    }
 }
