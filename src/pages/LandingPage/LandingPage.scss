@@ -87,6 +87,23 @@ p {
   }
 }
 
+#customers-section {
+    background-color: $color-near-black;
+
+    h2 {
+        @include dynamic-header(4.5em);
+    }
+
+    p {
+        @include dynamic-text(1.7em)
+    }
+    .customer {
+        color: $color-light-grey;
+        @include dynamic-text(1.5em);
+    }
+    
+}
+
 #contact-section {
   height: 50vh;
   h3 {
