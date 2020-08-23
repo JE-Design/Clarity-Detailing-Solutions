@@ -2,22 +2,16 @@
 @import "styles/colors.scss";
 
 .testimony-content {
-    h3 {
-        font-size: 2.5em;
-    }
+  h3 {
+    font-size: 2.5em;
+  }
 
-    p {
-        @include dynamic-text(1.5em);
-    }
+  p {
+    @include dynamic-text(1.5em);
+  }
 
-    a {
-        color: $color-grey;
-        text-decoration: underline;
-    }
-    
-    #car-images {
-        img {
-            object-fit: cover;
-        }
-    }
+  a {
+    color: $color-grey;
+    text-decoration: underline;
+  }
 }
