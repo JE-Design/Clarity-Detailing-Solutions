@@ -1,9 +1,14 @@
 import React from "react";
-import { PageContainer, PageHeader, Card } from "components/";
+import { PageContainer, PageHeader, Testimonial } from "components/";
 
 //Temporary
-import { ContactLinks } from "components/";
 import { testimonials_header } from "assets/";
+
+const customerTestimonialPhotos1 = [testimonials_header,testimonials_header];
+const testimonialReview1 = {url:"#",text:"Five star review on yelp"}
+
+const customerTestimonialPhotos2 = [testimonials_header,testimonials_header];
+const testimonialReview2 = {url:"#",text:"Five star review on yelp"}
 
 const TestimonialsPage = () => (
   <>
@@ -13,15 +18,22 @@ const TestimonialsPage = () => (
       caption="Here are some testimonials from customers that exist and have seen our products!"
     />
     <PageContainer className="flex flex-wrap">
-      <Card className="contact-links sm:w-full md:w-1/2">
-        <ContactLinks />
-      </Card>
-      <Card className="contact-links sm:w-full md:w-1/2">
-        <ContactLinks />
-      </Card>
-      <Card className="contact-links w-full">
-        <ContactLinks />
-      </Card>
+      <Testimonial
+        className="sm:w-full md:w-1/2"
+        customerName="Tim"
+        customerTestimony="This is a testimonial from a customer that exists and has seen our products!"
+        customerPhoto={testimonials_header}
+        carPhotos={customerTestimonialPhotos1}
+        review={testimonialReview1}
+      ></Testimonial>
+      <Testimonial
+        className="sm:w-full md:w-1/2"
+        customerName="Jim"
+        customerTestimony="This is a testimonial from a customer that exists and has seen our products!"
+        customerPhoto={testimonials_header}
+        carPhotos={customerTestimonialPhotos2}
+        review={testimonialReview2}
+      ></Testimonial>
     </PageContainer>
   </>
 );
