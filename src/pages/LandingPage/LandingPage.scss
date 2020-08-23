@@ -7,32 +7,84 @@ h2,
 h3,
 h4,
 p {
-    color: #fffafa;
-    font-weight: 100;
-    font-family: "Open Sans";
+  color: #fffafa;
+  font-weight: 100;
+  font-family: "Open Sans";
 }
 
 #landing-header {
-    height: 100vh;
-    transition: background-position 0.5s;
+  height: 100vh;
+  transition: background-position 0.5s;
 
-    h1 {
-        @include dynamic-header(5em);
-    }
-    p {
-        @include dynamic-header(2.5em);
-    }
+  h1 {
+    @include dynamic-header(5em);
+  }
+  p {
+    @include dynamic-header(2.5em);
+  }
+}
+
+#services-section {
+  height: 100vh;
+  transition: background-position 0.5s;
+
+  h1,
+  h2,
+  h3,
+  a {
+    font-weight: 100;
+    font-family: "Open Sans";
+  }
+  h2,
+  h3 {
+    color: $color-off-white;
+  }
+  h2 {
+    @include dynamic-header(3.5em);
+  }
+  h3 {
+    @include dynamic-header(2.5em);
+  }
+  a {
+    color: $color-light-grey;
+    text-decoration: underline;
+    @include dynamic-text(1.3em);
+  }
+}
+
+#contact-section {
+  height: 50vh;
+  h3,
+  h4 {
+    color: #fffafa;
+    font-weight: 100;
+    font-family: "Open Sans";
+  }
+  h3 {
+    font-weight: 500;
+    @include dynamic-header(4em);
+  }
+  h4 {
+    text-decoration: underline;
+    @include dynamic-header(2em);
+  }
+  h1 {
+    @include dynamic-header(5em);
+  }
+  h2 {
+    @include dynamic-header(2.5em);
+  }
 }
 
 #about-section {
-    height: 100vh;
+  height: 100vh;
 
-    h2 {
-        @include dynamic-header(4.5em);
-    }
-    p {
-        @include dynamic-header(1.9em);
-    }
+  h2 {
+    @include dynamic-header(4.5em);
+  }
+  p {
+    @include dynamic-header(1.9em);
+  }
 }
 
 #customers-section {
@@ -53,15 +105,13 @@ p {
 }
 
 #contact-section {
-    height: 50vh;
-    h3 {
-        font-weight: 500;
-        @include dynamic-text(4em);
-        //@include dynamic-text(5em);
-    }
-    h4 {
-        text-decoration: underline;
-        @include dynamic-text(2.5em);
-        //@include dynamic-fonts(2em);
-    }
+  height: 50vh;
+  h3 {
+    font-weight: 500;
+    @include dynamic-text(4em);
+  }
+  h4 {
+    text-decoration: underline;
+    @include dynamic-text(2.5em);
+  }
 }
