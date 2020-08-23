@@ -12,7 +12,7 @@ const Navbar = () => {
                 </a>
                 <div id="nav-content" className="flex items-center">
                     <h2 className="pr-3">Clarity Detailing Solutions</h2>
-                    <span className="h-full"></span>
+                    <span className="h-16"></span>
                     <a href="/services" className="p-3">
                         Services
                     </a>
