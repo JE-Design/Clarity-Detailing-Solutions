@@ -15,3 +15,10 @@
     transparent
   );
 }
+
+.Toastify__toast {
+  text-align: left;
+}
+.Toastify__toast--error {
+  background-color: rgb(162, 33, 20);
+}

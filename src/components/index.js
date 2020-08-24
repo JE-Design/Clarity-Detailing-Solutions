@@ -9,3 +9,4 @@ export { default as PageHeader } from "./PageHeader";
 export { default as Footer } from "./Footer";
 export { default as Service } from "./Service";
 export { default as Instafeed } from "./Instafeed";
+export { default as EmailForm } from "./EmailForm";
