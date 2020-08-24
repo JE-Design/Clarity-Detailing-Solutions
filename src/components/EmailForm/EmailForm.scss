@@ -27,16 +27,9 @@
     background-color: $color-off-white;
     color: $color-near-black;
     transition: background-color 0.2s;
-    @include sm {
-      width: 100%;
-      margin: 1rem 1rem;
-    }
+
     &:hover {
       background-color: rgba($color-off-white, 0.8);
-    }
-    &:active {
-      position: relative;
-      top: 1;
     }
     &:disabled {
       background-color: rgba($color-off-white, 0.8);

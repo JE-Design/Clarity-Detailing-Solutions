@@ -81,7 +81,6 @@ const EmailForm = () => {
         action=""
         method="POST"
       >
-        {/* <!-- add your custom form HTML here --> */}
         <FormField
           input="Name"
           type="text"
@@ -103,14 +102,14 @@ const EmailForm = () => {
         />
         <div className="p-3 w-full flex flex-wrap justify-center">
           <button
-            className={`formButton py-4 px-16 m-6 mt-2 box-shadow rounded-sm`}
+            className={`formButton py-4 px-16 m-4 mt-2 box-shadow rounded-sm sm:m-6 w-full sm:w-auto`}
             disabled={status === "SUCCESS" ? true : false}
             type="reset"
           >
             Clear
           </button>
           <button
-            className="formButton py-4 px-16 m-6 mt-2 box-shadow rounded-sm"
+            className="formButton py-4 px-16 m-4 mt-2 box-shadow rounded-sm sm:m-6 w-full sm:w-auto"
             disabled={status === "SUCCESS" ? true : false}
             type="submit"
           >
