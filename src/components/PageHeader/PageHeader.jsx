@@ -1,4 +1,5 @@
 import React from "react";
+import variables from "styles/colors.scss";
 import "./PageHeader.scss";
 
 const PageHeader = ({ imagePath, title, caption }) => {
@@ -6,6 +7,7 @@ const PageHeader = ({ imagePath, title, caption }) => {
     <div
       className="page-header relative z-0 p-12 bg-cover bg-center flex items-center justify-start"
       style={{
+        backgroundColor: `${variables.colorBlack}`,
         backgroundImage: `url(${imagePath})`,
       }}
     >

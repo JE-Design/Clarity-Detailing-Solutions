@@ -1,60 +1,101 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import AppRouter from "./AppRouter";
 import Footer from "./components/Footer";
 import { ToastContainer, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
+import { CircleLoader } from "react-spinners";
 import {
-    faInstagram,
-    faFacebook,
-    faTwitter,
-    faYoutube,
-    faSnapchat,
+  faInstagram,
+  faFacebook,
+  faTwitter,
+  faYoutube,
+  faSnapchat,
 } from "@fortawesome/free-brands-svg-icons";
 import {
-    faEnvelope,
-    faMapMarker,
-    faPhone,
+  faEnvelope,
+  faMapMarker,
+  faPhone,
 } from "@fortawesome/free-solid-svg-icons";
-import "./App.css";
+import * as assets from "assets/";
+import "./App.scss";
 import { Navbar } from "components";
 
 //Initialize fontawesome with desired icons
 library.add(
-    faInstagram,
-    faFacebook,
-    faTwitter,
-    faYoutube,
-    faSnapchat,
-    faEnvelope,
-    faMapMarker,
-    faPhone
+  faInstagram,
+  faFacebook,
+  faTwitter,
+  faYoutube,
+  faSnapchat,
+  faEnvelope,
+  faMapMarker,
+  faPhone
 );
 
 function App() {
-    return (
+  const [isLoading, setIsLoading] = useState(true);
+
+  const cacheImages = (images) => {
+    const promises = [];
+    images.forEach((src) => {
+      promises.push(
+        new Promise(function (resolve, reject) {
+          const img = new Image();
+          console.log(src);
+          img.src = src;
+          img.onload = () => {
+            resolve();
+          };
+          img.onerror = () => {
+            reject();
+          };
+        })
+      );
+    });
+
+    console.log(promises);
+    Promise.all(promises).then((values) => {
+      setIsLoading(false);
+    });
+  };
+
+  useEffect(() => {
+    const images = Object.values(assets);
+
+    cacheImages(images);
+  }, []);
+  return (
+    <>
+      {isLoading ? (
+        <div className="loading-screen w-full h-screen flex items-center justify-center">
+          <CircleLoader className="m-auto" size={50} color="white" />
+        </div>
+      ) : (
         <Router>
-            <div className="App">
-                <Navbar />
-                <AppRouter />
-                <Footer />
-                <ToastContainer
-                    className="z-30"
-                    transition={Slide}
-                    position="bottom-left"
-                    autoClose={3000}
-                    hideProgressBar={false}
-                    newestOnTop={false}
-                    closeOnClick
-                    rtl={false}
-                    pauseOnFocusLoss
-                    draggable={false}
-                    pauseOnHover
-                />
-            </div>
+          <div className="App">
+            <Navbar />
+            <AppRouter />
+            <Footer />
+            <ToastContainer
+              className="z-30"
+              transition={Slide}
+              position="bottom-left"
+              autoClose={3000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable={false}
+              pauseOnHover
+            />
+          </div>
         </Router>
-    );
+      )}
+    </>
+  );
 }
 
 export default App;

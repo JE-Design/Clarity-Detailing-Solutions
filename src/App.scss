@@ -1,6 +1,12 @@
+@import "styles/colors.scss";
+
 .App {
   text-align: center;
   min-width: 420px;
+}
+
+.loading-screen {
+  background-color: $color-black;
 }
 
 .App-logo {
