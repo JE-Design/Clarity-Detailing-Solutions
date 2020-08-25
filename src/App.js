@@ -40,7 +40,6 @@ function App() {
       promises.push(
         new Promise(function (resolve, reject) {
           const img = new Image();
-          console.log(src);
           img.src = src;
           img.onload = () => {
             resolve();
@@ -52,7 +51,6 @@ function App() {
       );
     });
 
-    console.log(promises);
     Promise.all(promises).then((values) => {
       setIsLoading(false);
     });

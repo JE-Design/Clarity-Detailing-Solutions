@@ -9,8 +9,6 @@ const PageHeader = ({ imagePath, title, caption }) => {
       style={{
         backgroundColor: `${variables.colorBlack}`,
         backgroundImage: `url(${imagePath})`,
-        backgroundAttachment: "fixed",
-        backgroundPosition: "bottom",
       }}
     >
       <div className="page-header-div flex flex-col text-left">
