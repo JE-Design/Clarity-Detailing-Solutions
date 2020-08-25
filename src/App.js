@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
 import AppRouter from "./AppRouter";
-import Footer from "./components/Footer";
 import { ToastContainer, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -20,7 +18,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import * as assets from "assets/";
 import "./App.scss";
-import { Navbar } from "components";
 
 //Initialize fontawesome with desired icons
 library.add(
@@ -73,26 +70,22 @@ function App() {
           <CircleLoader className="m-auto" size={50} color="white" />
         </div>
       ) : (
-        <Router>
-          <div className="App">
-            <Navbar />
-            <AppRouter />
-            <Footer />
-            <ToastContainer
-              className="z-30"
-              transition={Slide}
-              position="bottom-left"
-              autoClose={3000}
-              hideProgressBar={false}
-              newestOnTop={false}
-              closeOnClick
-              rtl={false}
-              pauseOnFocusLoss
-              draggable={false}
-              pauseOnHover
-            />
-          </div>
-        </Router>
+        <div className="App">
+          <AppRouter />
+          <ToastContainer
+            className="z-30"
+            transition={Slide}
+            position="bottom-left"
+            autoClose={3000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable={false}
+            pauseOnHover
+          />
+        </div>
       )}
     </>
   );

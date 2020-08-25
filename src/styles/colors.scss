@@ -12,5 +12,5 @@ $color-dark-grey: #2b2b2b;
 $transparent-black: #10101036;
 
 :export {
-  colorBlack: #101010;
+  colorBlack: $color-black;
 }
