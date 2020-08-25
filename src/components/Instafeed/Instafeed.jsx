@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Instafeed.scss";
 
 const Instafeed = () => {
@@ -19,9 +20,9 @@ const Instafeed = () => {
       <h3 className="text-center">Showcase</h3>
       {/* <div className="flex flex-center flex-wrap -m-3"> */}
       <div id="curator-feed-claritydetailsolutions-layout">
-        <a href="https://curator.io" target="_blank" class="crt-logo crt-tag">
+        <Link to="https://curator.io" target="_blank" className="crt-logo crt-tag">
           Powered by Curator.io
-        </a>
+        </Link>
       </div>
       {testURLs()}
     </div>

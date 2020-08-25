@@ -8,6 +8,7 @@ import {
     services_content3,
     contact_image,
 } from "assets/";
+import { Link } from "react-router-dom";
 import variables from "styles/colors.scss";
 import "./LandingPage.scss";
 
@@ -55,7 +56,7 @@ const LandingPage = () => (
             >
                 <div className="absolute p-4 bottom-0 left-0">
                     <h3>Interior Cleaning</h3>
-                    <a href="/services">Learn More</a>
+                    <Link to="/services">Learn More</Link>
                 </div>
             </div>
             <div className="w-full h-full flex flex-col mb-5 sm:mb-0 sm:flex-row">
@@ -66,7 +67,7 @@ const LandingPage = () => (
                 >
                     <div className="absolute p-4 bottom-0 left-0">
                         <h3>Car Washing</h3>
-                        <a href="/services">Learn More</a>
+                        <Link to="/services">Learn More</Link>
                     </div>
                 </div>
                 <div
@@ -76,7 +77,7 @@ const LandingPage = () => (
                 >
                     <div className="absolute p-4 bottom-0 left-0">
                         <h3>Coating</h3>
-                        <a href="/services">Learn More</a>
+                        <Link to="/services">Learn More</Link>
                     </div>
                 </div>
             </div>
@@ -87,7 +88,7 @@ const LandingPage = () => (
             >
                 <div className="absolute p-4 bottom-0 left-0">
                     <h3>Coating</h3>
-                    <a href="/services">Learn More</a>
+                    <Link to="/services">Learn More</Link>
                 </div>
             </div>
         </div>
@@ -129,9 +130,9 @@ const LandingPage = () => (
         >
             <div className="p-6 self-center">
                 <h3>Need a Quote?</h3>
-                <a href="/contact">
+                <Link to="/contact">
                     <h4>Contact Us</h4>
-                </a>
+                </Link>
             </div>
         </div>
     </div>
