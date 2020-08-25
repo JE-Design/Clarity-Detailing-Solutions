@@ -1,0 +1,38 @@
+@import "styles/mixins.scss";
+@import "styles/colors.scss";
+
+#contact-form {
+  @include dynamic-text(1.25em);
+
+  .box-shadow {
+    //needed outside tailwind
+    box-shadow: 0 5px 5px 2px $transparent-black,
+      0 5px 5px 2px $transparent-black;
+  }
+  h3 {
+    @include dynamic-text(2em);
+  }
+  input,
+  textarea {
+    color: $color-black;
+
+    &:not(:placeholder-shown):invalid {
+      -webkit-box-shadow: 0px 0px 10px 1px rgba(255, 0, 0, 1);
+      -moz-box-shadow: 0px 0px 10px 1px rgba(255, 0, 0, 1);
+      box-shadow: 0px 0px 10px 1px rgba(255, 0, 0, 1);
+    }
+  }
+
+  .formButton {
+    background-color: $color-off-white;
+    color: $color-near-black;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: rgba($color-off-white, 0.8);
+    }
+    &:disabled {
+      background-color: rgba($color-off-white, 0.8);
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import "styles/colors.scss";
+@import "styles/mixins.scss";
+
+.instafeed {
+  h3 {
+    @include dynamic-text(2.5em);
+    font-weight: 350;
+  }
+  .crt-logo {
+    color: white !important;
+  }
+  .crt-play-icon {
+    display: none;
+  }
+
+  .crt-post-c {
+    padding: 12px;
+  }
+}
