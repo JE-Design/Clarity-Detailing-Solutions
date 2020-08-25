@@ -4,9 +4,13 @@ import "./Card.scss";
 const Card = ({ children, className, empty }) => {
   return (
     <div
-      className={`${className} card relative z-10 p-8 flex text-left flex-col`}
+      className={`${className} card relative z-10 md:p-8 py-2 flex text-left flex-col`}
     >
-      <div className={`inner-container flex-auto -m-3 ${empty ? "" : "p-6"}`}>
+      <div
+        className={`inner-container flex-auto m-0 md:-m-3 ${
+          empty ? "" : "p-6"
+        }`}
+      >
         {children}
       </div>
     </div>

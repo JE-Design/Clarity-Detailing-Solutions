@@ -1,12 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./LinkIcon.scss";
 
 const LinkIcon = ({ className, icon, url }) => {
   return (
-    <Link className="flex items-center" href={url}>
+    <a
+      className="link-icon flex items-center"
+      target="_blank"
+      rel="noopener noreferrer"
+      href={url}
+    >
       <FontAwesomeIcon className={className} icon={icon} />
-    </Link>
+    </a>
   );
 };
 
