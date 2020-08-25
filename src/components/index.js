@@ -2,6 +2,7 @@ export { default as Card } from "./Card";
 export { default as Testimonial } from "./Testimonial";
 export { default as ContactLinks } from "./ContactLinks";
 export { default as LinkIcon } from "./LinkIcon";
+export { default as MenuIcon } from "./MenuIcon";
 export { default as TextIconCombo } from "./TextIconCombo";
 export { default as Navbar } from "./Navbar";
 export { default as PageContainer } from "./PageContainer";

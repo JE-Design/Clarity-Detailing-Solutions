@@ -15,6 +15,7 @@ import {
   faEnvelope,
   faMapMarker,
   faPhone,
+  faBars
 } from "@fortawesome/free-solid-svg-icons";
 import * as assets from "assets/";
 import "./App.scss";
@@ -28,7 +29,8 @@ library.add(
   faSnapchat,
   faEnvelope,
   faMapMarker,
-  faPhone
+  faPhone,
+  faBars
 );
 
 function App() {
