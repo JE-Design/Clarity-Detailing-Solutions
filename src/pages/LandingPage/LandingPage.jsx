@@ -31,9 +31,9 @@ const LandingPage = () => (
                 backgroundImage: `linear-gradient(to top, black, transparent 8%), url(${about_image})`,
             }}
         >
-            <div className="p-6 flex self-center mb-20">
-                <h2 className="self-center w-1/2">About Us</h2>
-                <p className="text-left mr-10 w-1/2">
+            <div className="p-6 flex flex-col sm:flex-row self-center mb-20">
+                <h2 className="self-center w-full sm:w-1/2">About Us</h2>
+                <p className="text-center sm:text-left px-5 w-full sm:w-1/2">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Donec pharetra ipsum non leo placerat vulputate. Etiam
                     lobortis feugiat mauris, nec lobortis risus auctor sit amet
@@ -72,7 +72,7 @@ const LandingPage = () => (
                 </div>
                 <div
                     id="services-section3"
-                    className="bg-cover relative flex flex-col hidden sm:block h-full w-full sm:w-1/2 bg-center"
+                    className="bg-cover relative flex-col hidden sm:flex h-full w-full sm:w-1/2 bg-center"
                     style={{ backgroundImage: `url(${services_content3})` }}
                 >
                     <div className="absolute p-4 bottom-0 left-0">
@@ -83,7 +83,7 @@ const LandingPage = () => (
             </div>
             <div
                 id="services-section3"
-                className="bg-cover relative flex flex-col block sm:hidden h-full w-full sm:w-1/2 bg-center"
+                className="bg-cover relative flex flex-col sm:hidden h-full w-full sm:w-1/2 bg-center"
                 style={{ backgroundImage: `url(${services_content3})` }}
             >
                 <div className="absolute p-4 bottom-0 left-0">
