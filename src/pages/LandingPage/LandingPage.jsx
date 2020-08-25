@@ -17,7 +17,10 @@ const LandingPage = () => (
         <div
             id="landing-header"
             className="w-full flex bg-cover bg-right"
-            style={{ backgroundImage: `url(${landing_image})` }}
+            style={{
+                backgroundColor: "black",
+                backgroundImage: `url(${landing_image})`,
+            }}
         >
             <div className="p-6 self-end text-left">
                 <h1>Clarity Detailing Solutions</h1>

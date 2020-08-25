@@ -1,9 +1,9 @@
 // Primary Color Scheme
-$color-black: #101010;
+$color-black: #0a0b0d;
 $color-near-black: #050505;
 $color-off-white: #fffafa;
-$color-grey: #AEAEAE;
-$color-light-grey: #BDBDBD;
+$color-grey: #aeaeae;
+$color-light-grey: #bdbdbd;
 
 // Card Colours
 $color-dark-grey: #2b2b2b;
@@ -12,5 +12,5 @@ $color-dark-grey: #2b2b2b;
 $transparent-black: #10101036;
 
 :export {
-  colorBlack: #101010;
+  colorBlack: $color-black;
 }
