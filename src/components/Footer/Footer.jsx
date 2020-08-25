@@ -1,5 +1,6 @@
 import React from "react";
 import { logo_image } from "assets/";
+import { Link } from "react-router-dom";
 import "./Footer.scss";
 
 const Footer = () => {
@@ -12,13 +13,13 @@ const Footer = () => {
                 <nav className="relative flex w-full sm:w-4/12 p-6">
                     <ul className="w-full">
                         <li className="sm:text-left p-1 md:p-2">
-                            <a href="/services">Services</a>
+                            <Link to="/services">Services</Link>
                         </li>
                         <li className="sm:text-left p-1 md:p-2">
-                            <a href="/testimonials">Testimonials</a>
+                            <Link to="/testimonials">Testimonials</Link>
                         </li>
                         <li className="sm:text-left p-1 md:p-2">
-                            <a href="/contact">Contact Us</a>
+                            <Link to="/contact">Contact Us</Link>
                         </li>
                     </ul>
                 </nav>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Card } from "components/";
+import { Link } from "react-router-dom";
 import "./Testimonial.scss";
 
 const Testimonial = ({
@@ -21,7 +22,7 @@ const Testimonial = ({
         ></img>
       </div>
       <p>{customerTestimony}</p>
-      <a href={review.url}>{review.text}</a>
+      <Link to={review.url}>{review.text}</Link>
       <div>
         {carPhotos.map((photoPath) => {
           return <img className="w-full mt-5" alt="car" src={photoPath}></img>;
