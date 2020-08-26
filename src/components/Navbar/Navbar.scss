@@ -4,6 +4,15 @@ header {
     img {
         filter: brightness(0) invert(1);
     }
+    a {
+        font-size: 1.3em;
+        font-weight: 300;
+        color: $color-off-white;
+    }
+    a:hover,
+    a:focus {
+        text-decoration: underline;
+    }
 }
 
 #nav-content {
@@ -13,14 +22,5 @@ header {
     }
     span {
         border-right: 2px solid $color-off-white;
-    }
-    a {
-        font-size: 1.3em;
-        font-weight: 300;
-        color: $color-off-white;
-    }
-    a:hover,
-    a:focus {
-        text-decoration: underline;
     }
 }

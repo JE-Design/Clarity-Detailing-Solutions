@@ -7,6 +7,7 @@ import { logo_image } from "assets/";
 
 const Navbar = () => {
     const [navbarColor, setNavbarColor] = useState("#10101000");
+    const [openMenu, setOpenMenu] = useState(false);
     const location = useLocation();
     const options = ["Services", "Testimonials", "Contact"];
 
@@ -17,6 +18,12 @@ const Navbar = () => {
         // if scroll is at zero, make navbar transparent
         else setNavbarColor("transparent");
     });
+
+    if (openMenu) {
+        if (navbarColor === "#10101000" || navbarColor === "transparent")
+            setNavbarColor(`#101010`);
+    }
+
     return (
         <header
             className="z-20 fixed flex flex-col w-full"
@@ -26,10 +33,20 @@ const Navbar = () => {
             }}
         >
             <div id="nav-content" className="relative flex items-center p-6">
-                <Link to="/" className="w-20 sm:w-24 mr-4">
+                <Link
+                    to="/"
+                    className="w-24 mr-4"
+                    onClick={() => {
+                        setOpenMenu(false);
+                        setNavbarColor("transparent");
+                    }}
+                >
                     <img src={logo_image} alt="logo"></img>
                 </Link>
-                <h2 className="pr-3 w-5/6 md:w-auto text-left">Clarity Detailing Solutions</h2>
+                <h2 className="pr-3 hidden sm:block w-5/6 md:w-auto text-left">
+                    Clarity Detailing Solutions
+                </h2>
+                <span className="w-5/6 block sm:hidden"></span>
                 <span className="hidden md:inline h-16"></span>
                 <nav className="flex items-center">
                     <div className="hidden md:block">
@@ -58,11 +75,33 @@ const Navbar = () => {
                         <MenuIcon
                             className="icon mx-5 my-2 block md:hidden"
                             icon={["fa", "bars"]}
-                            options={options}
+                            openMenu={openMenu}
+                            setOpenMenu={setOpenMenu}
                         ></MenuIcon>
                     </div>
                 </nav>
             </div>
+            {openMenu ? (
+                <ul className="z-20 -mt-5 pb-5 pr-5 text-right block md:hidden">
+                    {options.map((option, key) => {
+                        let path = "/" + option.toLowerCase();
+                        return (
+                            <li key={key}>
+                                <Link
+                                    to={path}
+                                    className="p-3"
+                                    onClick={() => {
+                                        setOpenMenu(false);
+                                        setNavbarColor("transparent");
+                                    }}
+                                >
+                                    {option}
+                                </Link>
+                            </li>
+                        );
+                    })}
+                </ul>
+            ) : null}
         </header>
     );
 };
