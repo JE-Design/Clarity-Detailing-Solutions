@@ -9,7 +9,7 @@ const Instafeed = () => {
       s = "script";
     i = d.createElement("script");
     i.async = 1;
-    i.src = "curator url here";
+    i.src = `${process.env.REACT_APP_CURATOR_IO_SRC}`;
     e = d.getElementsByTagName(s)[0];
     e.parentNode.insertBefore(i, e);
   }
