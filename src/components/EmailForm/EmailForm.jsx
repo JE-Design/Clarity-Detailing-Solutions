@@ -78,7 +78,7 @@ const EmailForm = () => {
       <form
         className="flex flex-wrap -m-6"
         onSubmit={(e) => submitForm(e)}
-        action=""
+        action={`${process.env.REACT_APP_FORMSPREE_ENDPOINT}`}
         method="POST"
       >
         <FormField
