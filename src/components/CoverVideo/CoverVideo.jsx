@@ -1,12 +1,11 @@
 import React from "react";
 import videojs from "video.js";
+import "./CoverVideo.scss";
 
 export default class VideoPlayer extends React.Component {
   componentDidMount() {
     // instantiate Video.js
-    this.player = videojs(this.videoNode, this.props, function onPlayerReady() {
-      console.log("onPlayerReady", this);
-    });
+    this.player = videojs(this.videoNode, this.props, this.props.onPlayerReady);
   }
 
   // destroy player on unmount
@@ -21,11 +20,14 @@ export default class VideoPlayer extends React.Component {
   // see https://github.com/videojs/video.js/pull/3856
   render() {
     return (
-      <div>
-        <div data-vjs-player>
+      <div
+        style={this.props.style}
+        className="overflow-hidden h-screen w-screen"
+      >
+        <div data-vjs-player className="video-wrapper">
           <video
             ref={(node) => (this.videoNode = node)}
-            className="video-js"
+            className="video-js video-player vjs-fluid vjs-16-9"
           ></video>
         </div>
       </div>

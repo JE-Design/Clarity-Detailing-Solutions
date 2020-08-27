@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   landing_image,
   about_image,
@@ -8,18 +8,23 @@ import {
   services_content3,
   contact_image,
 } from "assets/";
+import cover_video from "assets/video/cover_video.mp4";
 import { Link } from "react-router-dom";
 import { CoverVideo } from "components/";
 import variables from "styles/colors.scss";
+import "video.js/dist/video-js.css";
 import "./LandingPage.scss";
 
 const LandingPage = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const videoJsOptions = {
     autoplay: true,
-    controls: true,
+    controls: false,
+    loop: true,
+    preload: true,
     sources: [
       {
-        src: "/path/to/video.mp4",
+        src: cover_video,
         type: "video/mp4",
       },
     ],
@@ -35,8 +40,16 @@ const LandingPage = () => {
           backgroundImage: `url(${landing_image})`,
         }}
       >
-        <CoverVideo {...videoJsOptions} />
-        <div className="p-6 self-end text-left">
+        <CoverVideo
+          style={{
+            display: isLoading ? "none" : "block",
+          }}
+          onPlayerReady={() => {
+            setIsLoading(false);
+          }}
+          {...videoJsOptions}
+        />
+        <div className="absolute p-6 self-end text-left">
           <h1>Clarity Detailing Solutions</h1>
           <p>It's all in the details</p>
         </div>
