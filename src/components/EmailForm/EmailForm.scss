@@ -27,12 +27,23 @@
     background-color: $color-off-white;
     color: $color-near-black;
     transition: background-color 0.2s;
+    background-position: center;
+    transition: background 0.4s;
 
     &:hover {
-      background-color: rgba($color-off-white, 0.8);
+      background: rgba($color-off-white, 0.8)
+        radial-gradient(circle, transparent 1%, rgba($color-off-white, 1) 1%)
+        center/15000%;
     }
-    &:disabled {
+
+    &:active {
       background-color: rgba($color-off-white, 0.8);
+      background-size: 100%;
+      transition: background 0s;
+    }
+
+    &:disabled {
+      background-color: rgba($color-off-white, 0.6);
     }
   }
 }

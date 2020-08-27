@@ -65,7 +65,10 @@ function App() {
     <>
       {isLoading ? (
         <div className="loading-screen w-full h-screen flex items-center justify-center">
-          <CircleLoader className="m-auto" size={50} color="white" />
+          <div className="flex flex-col items-center">
+            <h2 className="p-6">Clarity Detailing Solutions</h2>
+            <CircleLoader className="m-auto" size={50} color="white" />
+          </div>
         </div>
       ) : (
         <div className="App">
