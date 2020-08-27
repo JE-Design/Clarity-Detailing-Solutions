@@ -14,6 +14,9 @@ const Navbar = (props) => {
   const updateStuff = (prevScrollPos, cancel) => {
     let currentScrollPos = window.pageYOffset;
     if (
+      // Support for tablets and mobile devices
+      prevScrollPos < 0 ||
+      currentScrollPos < 0 ||
       prevScrollPos > currentScrollPos ||
       (prevScrollPos === 0 && currentScrollPos === 0)
     ) {
@@ -37,7 +40,7 @@ const Navbar = (props) => {
         updateStuff(scrollPos, this.cancel);
       },
       500,
-      { leading: true, maxWait: 500 }
+      { maxWait: 500 }
     )
   );
   return (
