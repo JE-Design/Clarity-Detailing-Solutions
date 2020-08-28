@@ -3,9 +3,9 @@
 @import "styles/mediaQueries.scss";
 
 .page-header {
-  height: 70vh;
+  height: 500px;
   @include sm {
-    height: 50vh;
+    height: 400px;
   }
   transition: background 1s;
 

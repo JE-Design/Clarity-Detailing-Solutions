@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import { CoverVideo } from "components/";
 import variables from "styles/colors.scss";
 import "video.js/dist/video-js.css";
+import canAutoPlay from "can-autoplay";
 import "./LandingPage.scss";
 
 const LandingPage = () => {
@@ -46,7 +47,11 @@ const LandingPage = () => {
             display: isLoading ? "none" : "block",
           }}
           onPlayerReady={() => {
-            setIsLoading(false);
+            canAutoPlay.video({ muted: true }).then(({ result }) => {
+              if (result === true) {
+                setIsLoading(false);
+              }
+            });
           }}
           {...videoJsOptions}
         />

@@ -28,6 +28,7 @@ export default class VideoPlayer extends React.Component {
           <video
             ref={(node) => (this.videoNode = node)}
             className="video-js video-player vjs-fluid vjs-16-9 p-0"
+            playsinline
           ></video>
         </div>
       </div>
