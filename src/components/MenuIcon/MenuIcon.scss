@@ -1,0 +1,8 @@
+@import "styles/colors.scss";
+svg {
+    color: $color-off-white;
+    svg:focus {
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0.65;
+    }
+}
