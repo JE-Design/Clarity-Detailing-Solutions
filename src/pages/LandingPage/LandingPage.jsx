@@ -22,6 +22,7 @@ const LandingPage = () => {
     controls: false,
     loop: true,
     preload: true,
+    muted: true,
     sources: [
       {
         src: cover_video,
