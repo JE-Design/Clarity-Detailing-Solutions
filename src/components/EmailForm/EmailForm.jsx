@@ -51,7 +51,6 @@ const notifyFailure = () =>
 const EmailForm = () => {
   const [status, setStatus] = useState("");
   const submitForm = (ev) => {
-    console.log(ev);
     ev.preventDefault();
     const form = ev.target;
     const data = new FormData(form);
@@ -60,7 +59,6 @@ const EmailForm = () => {
     xhr.setRequestHeader("Accept", "application/json");
     xhr.onreadystatechange = () => {
       if (xhr.readyState !== XMLHttpRequest.DONE) return;
-      console.log(xhr.status);
       if (xhr.status === 200) {
         form.reset();
         notifySuccess();

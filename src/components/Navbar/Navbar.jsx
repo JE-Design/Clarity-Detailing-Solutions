@@ -27,7 +27,6 @@ const Navbar = () => {
             setTop("0px");
         } else {
             if (location.pathname === "/") {
-                console.log(currentScrollPos/window.innerHeight)
                 if (scrollPercentage > 20) {
                     setTop("-180px");
                     setOpenMenu(false);
