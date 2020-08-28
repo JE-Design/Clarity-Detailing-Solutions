@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import debounce from "lodash.debounce";
 import "./Navbar.scss";
@@ -49,7 +49,6 @@ const Navbar = (props) => {
       id="navbar"
       style={{
         backgroundColor: navbarColor,
-        transition: "background-color 0.5s",
         top: top,
         transition: "all 0.5s ease-in-out",
       }}
@@ -62,7 +61,7 @@ const Navbar = (props) => {
           <Link to="/" className="pr-3">
             <h2>Clarity Detailing Solutions</h2>
           </Link>
-          <span className="divider"></span>
+          <span className="divider h-8"></span>
           <Link
             to="/services"
             className="nav-link p-3"
