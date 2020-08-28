@@ -78,7 +78,7 @@ const EmailForm = () => {
       <form
         className="flex flex-wrap -m-6"
         onSubmit={(e) => submitForm(e)}
-        action=""
+        action={`${process.env.REACT_APP_FORMSPREE_ENDPOINT}`}
         method="POST"
       >
         <FormField
@@ -102,14 +102,14 @@ const EmailForm = () => {
         />
         <div className="p-3 w-full flex flex-wrap justify-center">
           <button
-            className={`formButton py-4 px-16 m-4 mt-2 box-shadow rounded-sm sm:m-6 w-64 sm:w-auto`}
+            className={`formButton py-4 px-16 m-4 mt-2 box-shadow rounded-sm sm:m-6 w-64 sm:w-auto bg-center`}
             disabled={status === "SUCCESS" ? true : false}
             type="reset"
           >
             Clear
           </button>
           <button
-            className="formButton py-4 px-16 m-4 mt-2 box-shadow rounded-sm sm:m-6 w-64 sm:w-auto"
+            className="formButton py-4 px-16 m-4 mt-2 box-shadow rounded-sm sm:m-6 w-64 sm:w-auto bg-center"
             disabled={status === "SUCCESS" ? true : false}
             type="submit"
           >

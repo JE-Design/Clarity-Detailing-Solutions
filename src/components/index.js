@@ -1,4 +1,5 @@
 export { default as Card } from "./Card";
+export { default as CoverVideo } from "./CoverVideo";
 export { default as Testimonial } from "./Testimonial";
 export { default as ContactLinks } from "./ContactLinks";
 export { default as LinkIcon } from "./LinkIcon";

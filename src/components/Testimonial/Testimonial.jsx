@@ -12,7 +12,7 @@ const Testimonial = ({
   review,
 }) => (
   <Card className={className}>
-    <div className="testimony-content">
+    <div className="testimony-content p-2">
       <div className="flex">
         <h3 className="w-11/12">{customerName}</h3>
         <img

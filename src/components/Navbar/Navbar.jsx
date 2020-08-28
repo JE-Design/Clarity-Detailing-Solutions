@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { MenuIcon } from "components";
+import debounce from "lodash.debounce";
 import "./Navbar.scss";
 
 import { logo_image } from "assets/";
@@ -10,14 +11,41 @@ const Navbar = () => {
     const [openMenu, setOpenMenu] = useState(false);
     const location = useLocation();
     const options = ["Services", "Testimonials", "Contact"];
+    const [top, setTop] = useState("0px");
 
-    // update navbar color on scroll
-    window.addEventListener("scroll", () => {
+    let scrollPos = window.pageYOffset;
+    const updateStuff = (prevScrollPos, cancel) => {
+        let currentScrollPos = window.pageYOffset;
+        if (
+            // Support for tablets and mobile devices
+            prevScrollPos < 0 ||
+            currentScrollPos < 0 ||
+            prevScrollPos > currentScrollPos ||
+            (prevScrollPos === 0 && currentScrollPos === 0)
+        ) {
+            setTop("0px");
+        } else {
+            setTop("-180px");
+        }
+        prevScrollPos = window.pageYOffset;
         // if scroll is not at 0
-        if (window.scrollY > 0) setNavbarColor(`#101010`);
+        if (window.scrollY > 0) {
+            setNavbarColor(`#101010`);
+        }
         // if scroll is at zero, make navbar transparent
         else setNavbarColor("transparent");
-    });
+    };
+    // update navbar color on scroll
+    window.addEventListener(
+        "scroll",
+        debounce(
+            function () {
+                updateStuff(scrollPos, this.cancel);
+            },
+            500,
+            { maxWait: 500 }
+        )
+    );
 
     if (openMenu) {
         if (navbarColor === "#10101000" || navbarColor === "transparent")
@@ -27,9 +55,11 @@ const Navbar = () => {
     return (
         <header
             className="z-20 fixed flex flex-col w-full"
+            id="navbar"
             style={{
                 backgroundColor: navbarColor,
-                transition: "background-color 0.5s",
+                top: top,
+                transition: "all 0.5s ease-in-out",
             }}
         >
             <div id="nav-content" className="relative flex items-center p-6">
