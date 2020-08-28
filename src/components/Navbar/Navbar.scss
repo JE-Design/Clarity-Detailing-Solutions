@@ -1,7 +1,6 @@
 @import "styles/colors";
 
 header {
-<<<<<<< HEAD
     img {
         filter: brightness(0) invert(1);
     }
@@ -14,40 +13,19 @@ header {
     a:focus {
         text-decoration: underline;
     }
-=======
-  img {
-    filter: brightness(0) invert(1);
-  }
-}
-
-#nav-content {
-  .nav-link {
-    transition: all 0.2s;
-  }
-  .divider {
-    opacity: 0.6;
-  }
-  h2 {
-    font-size: 1.25em;
-    font-weight: 500;
-  }
-  span {
-    border-right: 2px solid $color-off-white;
-  }
-  a {
-    font-size: 1.3em;
-    font-weight: 300;
-    color: $color-off-white;
-  }
->>>>>>> master
-}
-
-#nav-content {
-    h2 {
-        font-size: 1.3em;
-        font-weight: 500;
-    }
-    span {
-        border-right: 2px solid $color-off-white;
+    #nav-content {
+        .nav-link {
+            transition: all 0.2s;
+        }
+        .divider {
+            opacity: 0.6;
+        }
+        h2 {
+            font-size: 1.25em;
+            font-weight: 500;
+        }
+        span {
+            border-right: 2px solid $color-off-white;
+        }
     }
 }

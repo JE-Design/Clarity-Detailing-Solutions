@@ -9,11 +9,12 @@ import { logo_image } from "assets/";
 const Navbar = () => {
     const [navbarColor, setNavbarColor] = useState("#10101000");
     const [openMenu, setOpenMenu] = useState(false);
+    const [top, setTop] = useState("0px");
     const location = useLocation();
     const options = ["Services", "Testimonials", "Contact"];
-    const [top, setTop] = useState("0px");
 
     let scrollPos = window.pageYOffset;
+    let scrollPercentage = Math.floor((scrollPos / window.innerHeight) * 100)
     const updateStuff = (prevScrollPos, cancel) => {
         let currentScrollPos = window.pageYOffset;
         if (
@@ -25,7 +26,16 @@ const Navbar = () => {
         ) {
             setTop("0px");
         } else {
-            setTop("-180px");
+            if (location.pathname === "/") {
+                console.log(currentScrollPos/window.innerHeight)
+                if (scrollPercentage > 20) {
+                    setTop("-180px");
+                    setOpenMenu(false);
+                }
+            } else {
+                setTop("-180px");
+                setOpenMenu(false);
+            }
         }
         prevScrollPos = window.pageYOffset;
         // if scroll is not at 0
@@ -50,6 +60,10 @@ const Navbar = () => {
     if (openMenu) {
         if (navbarColor === "#10101000" || navbarColor === "transparent")
             setNavbarColor(`#101010`);
+    } else {
+        if (scrollPos === 0 && navbarColor !== "transparent") {
+            setNavbarColor("transparent");
+        }
     }
 
     return (
@@ -111,27 +125,28 @@ const Navbar = () => {
                     </div>
                 </nav>
             </div>
-            {openMenu ? (
-                <ul className="z-20 -mt-5 pb-5 pr-5 text-right block md:hidden">
-                    {options.map((option, key) => {
-                        let path = "/" + option.toLowerCase();
-                        return (
-                            <li key={key}>
-                                <Link
-                                    to={path}
-                                    className="p-3"
-                                    onClick={() => {
-                                        setOpenMenu(false);
-                                        setNavbarColor("transparent");
-                                    }}
-                                >
-                                    {option}
-                                </Link>
-                            </li>
-                        );
-                    })}
-                </ul>
-            ) : null}
+            <ul
+                className="z-20 -mt-5 pb-5 pr-5 text-center block md:hidden"
+                style={openMenu ? { height: "block" } : { display: "none" }}
+            >
+                {options.map((option, key) => {
+                    let path = "/" + option.toLowerCase();
+                    return (
+                        <li key={key}>
+                            <Link
+                                to={path}
+                                className="p-3"
+                                onClick={() => {
+                                    setOpenMenu(false);
+                                    setNavbarColor("transparent");
+                                }}
+                            >
+                                {option}
+                            </Link>
+                        </li>
+                    );
+                })}
+            </ul>
         </header>
     );
 };
