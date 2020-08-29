@@ -14,7 +14,7 @@ const Navbar = () => {
     const options = ["Services", "Testimonials", "Contact"];
 
     let scrollPos = window.pageYOffset;
-    let scrollPercentage = Math.floor((scrollPos / window.innerHeight) * 100)
+    let scrollPercentage = Math.floor((scrollPos / window.innerHeight) * 100);
     const updateStuff = (prevScrollPos, cancel) => {
         let currentScrollPos = window.pageYOffset;
         if (
@@ -139,6 +139,14 @@ const Navbar = () => {
                                     setOpenMenu(false);
                                     setNavbarColor("transparent");
                                 }}
+                                style={
+                                    location.pathname === path
+                                        ? {
+                                              textDecoration: "underline",
+                                              fontWeight: "bold",
+                                          }
+                                        : {}
+                                }
                             >
                                 {option}
                             </Link>

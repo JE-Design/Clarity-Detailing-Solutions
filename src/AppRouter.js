@@ -12,6 +12,7 @@ import {
   TestimonialsPage,
   ContactPage,
 } from "pages";
+import { RouterPaths } from "utils"
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -29,16 +30,16 @@ function AppRouter() {
       <ScrollToTop />
       <Navbar />
       <Switch>
-        <Route path="/services">
+        <Route path={RouterPaths.SERVICES}>
           <ServicesPage />
         </Route>
-        <Route path="/testimonials">
+        <Route path={RouterPaths.TESTIMONIALS}>
           <TestimonialsPage />
         </Route>
-        <Route path="/contact">
+        <Route path={RouterPaths.CONTACT}>
           <ContactPage />
         </Route>
-        <Route path="/">
+        <Route path={RouterPaths.LANDING}>
           <LandingPage />
         </Route>
       </Switch>
