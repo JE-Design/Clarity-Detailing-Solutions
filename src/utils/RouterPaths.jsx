@@ -1,8 +1,8 @@
 const RouterPaths = {
-    CONTACT: "/contact",
-    TESTIMONIALS: "/testimonials",
     SERVICES: "/services",
-    LANDING: "/"
-  };
-  
-  export default RouterPaths;
+    TESTIMONIALS: "/testimonials",
+    CONTACT: "/contact",
+    LANDING: "/",
+};
+
+export default RouterPaths;
