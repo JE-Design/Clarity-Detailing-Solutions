@@ -1,10 +1,10 @@
 import React from "react";
 import { logo_image } from "assets/";
 import { Link } from "react-router-dom";
+import { RouterPaths } from "utils";
 import "./Footer.scss";
 
 const Footer = () => {
-    const options = ["Services", "Testimonials", "Contact"];
     return (
         <footer className="flex flex-col w-full">
             <div
@@ -13,15 +13,18 @@ const Footer = () => {
             >
                 <nav className="relative flex w-full sm:w-4/12 p-6">
                     <ul className="w-full">
-                        {options.map((option, key) => {
-                            const url = "/" + option;
+                        {Object.values(RouterPaths).map((path, key) => {
                             return (
-                                <li
-                                    key={key}
-                                    className="sm:text-left p-1 md:p-2"
-                                >
-                                    <Link to={url}>{option}</Link>
-                                </li>
+                                (path !== "/") &&
+                                    <li
+                                        key={key}
+                                        className="sm:text-left p-1 md:p-2"
+                                    >
+                                        <Link to={path}>
+                                            {path.replace("/","").charAt(0).toUpperCase() +
+                                                path.slice(2)}
+                                        </Link>
+                                    </li>
                             );
                         })}
                     </ul>

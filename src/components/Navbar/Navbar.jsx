@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { MenuIcon } from "components";
 import debounce from "lodash.debounce";
+import { RouterPaths } from "utils";
 import "./Navbar.scss";
 
 import { logo_image } from "assets/";
@@ -11,10 +12,9 @@ const Navbar = () => {
     const [openMenu, setOpenMenu] = useState(false);
     const [top, setTop] = useState("0px");
     const location = useLocation();
-    const options = ["Services", "Testimonials", "Contact"];
 
     let scrollPos = window.pageYOffset;
-    let scrollPercentage = Math.floor((scrollPos / window.innerHeight) * 100)
+    let scrollPercentage = Math.floor((scrollPos / window.innerHeight) * 100);
     const updateStuff = (prevScrollPos, cancel) => {
         let currentScrollPos = window.pageYOffset;
         if (
@@ -93,24 +93,29 @@ const Navbar = () => {
                 <span className="hidden md:inline h-16"></span>
                 <nav className="flex items-center">
                     <div className="hidden md:block">
-                        {options.map((option, key) => {
-                            let path = "/" + option.toLowerCase();
+                        {Object.values(RouterPaths).map((path, key) => {
                             return (
-                                <Link
-                                    key={key}
-                                    to={path}
-                                    className="p-3"
-                                    style={
-                                        location.pathname === path
-                                            ? {
-                                                  textDecoration: "underline",
-                                                  fontWeight: "bold",
-                                              }
-                                            : {}
-                                    }
-                                >
-                                    {option}
-                                </Link>
+                                path !== "/" && (
+                                    <Link
+                                        key={key}
+                                        to={path}
+                                        className="p-3"
+                                        style={
+                                            location.pathname === path
+                                                ? {
+                                                      textDecoration:
+                                                          "underline",
+                                                      fontWeight: "bold",
+                                                  }
+                                                : {}
+                                        }
+                                    >
+                                        {path
+                                            .replace("/", "")
+                                            .charAt(0)
+                                            .toUpperCase() + path.slice(2)}
+                                    </Link>
+                                )
                             );
                         })}
                     </div>
@@ -128,21 +133,33 @@ const Navbar = () => {
                 className="z-20 -mt-5 pb-5 pr-5 text-center block md:hidden"
                 style={openMenu ? { height: "block" } : { display: "none" }}
             >
-                {options.map((option, key) => {
-                    let path = "/" + option.toLowerCase();
+                {Object.values(RouterPaths).map((path, key) => {
                     return (
-                        <li key={key}>
-                            <Link
-                                to={path}
-                                className="p-3"
-                                onClick={() => {
-                                    setOpenMenu(false);
-                                    setNavbarColor("transparent");
-                                }}
-                            >
-                                {option}
-                            </Link>
-                        </li>
+                        path !== "/" && (
+                            <li key={key}>
+                                <Link
+                                    to={path}
+                                    className="p-3"
+                                    onClick={() => {
+                                        setOpenMenu(false);
+                                        setNavbarColor("transparent");
+                                    }}
+                                    style={
+                                        location.pathname === path
+                                            ? {
+                                                  textDecoration: "underline",
+                                                  fontWeight: "bold",
+                                              }
+                                            : {}
+                                    }
+                                >
+                                    {path
+                                        .replace("/", "")
+                                        .charAt(0)
+                                        .toUpperCase() + path.slice(2)}
+                                </Link>
+                            </li>
+                        )
                     );
                 })}
             </ul>
