@@ -35,13 +35,13 @@ Explained here are the most important points of the code structure, where to fin
 ├── frontend                
 │   ├── public              # Static assets that are deployed as-is when built
 │   ├── src                 # Code directory for frontend container
-│   │   ├── Assets          # Static assets (images, icons)
-│   │   ├── Components      # Non-page level react components (ex. navbar)
-│   │   ├── Pages           # React component pages (ex. about, contact)
-│   │   ├── Styles          # Global styles and SCSS mixins
-│   │   ├── Utils           # Reusable functions and globals
-│   │   ├── Values          # Localization data (language translations)
+│   │   ├── assets          # Static assets (images, icons)
+│   │   ├── components      # Non-page level react components (ex. navbar)
+│   │   ├── pages           # React component pages (ex. about, contact)
+│   │   ├── styles          # Global styles and SCSS mixins
+│   │   ├── utils           # Reusable functions and globals
 │   │   ├── App.jsx         # Main app file composing the entire application
+│   │   ├── AppRouter.jsx   # Router file that controls website path direction and redirection
 │   │   └── ...
 │   ├── .gitignore          # Files that should not be posted to git (ex. npm modules)
 │   ├── jsconfig.json       # Project config (enables absolute path imports)
@@ -56,6 +56,8 @@ Explained here are the most important points of the code structure, where to fin
 Frontend: 
 - [React](https://reactjs.org/)
 - [SCSS](https://sass-lang.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Video.js](https://videojs.com/)
 
 Linting and Formatting: 
 - [Airbnb style guide](https://airbnb.io/javascript/react/)
@@ -64,7 +66,7 @@ Linting and Formatting:
 
 
 ## Deployment
-//more to come
+The Clarity Detailing Solutions website is hosted via the Netlify platform. On commits to the master branch, Netlify automatically deploys the updated branch to production.
 
 ## Contributors
 - Eros Di Pede
